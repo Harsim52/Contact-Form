@@ -1,52 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Submit Message -->
+    <div class="msg-sent ">
+      <p id="msg-bold">
+        <b
+          ><span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="none"
+              viewBox="0 0 18 18"
+            >
+              <path
+                fill="#0C7D69"
+                d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"
+              /></svg></span
+          >Message Sent!</b
+        >
+      </p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <div class="form-container">
+      <form action="">
+        <h1>Contact Us</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+        <main>
+          <!-- First Name -->
+          <div id="name-cont">
+            <div class="name-cont">
+              <label for="fname" class="labels"
+                >First Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                required
+                minlength="3"
+              />
+              <p class="error-state hide" id="fname-error">This field is required</p>
+            </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+            <!-- Last Name -->
+            <div class="name-cont">
+              <label for="lname" class="labels"
+                >Last Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                required
+                minlength="2"
+              />
+              <p class="error-state hide" id="lname-error">This field is required</p>
+            </div>
+          </div>
+          <!-- Email -->
 
-  Contact Us
+          <label for="email" class="labels"
+            >Email Address<span class="required">*</span></label
+          >
+          <input type="email" name="email" id="email" required />
+          <p class="error-state hide" id="email-error">Please enter a valid email address</p>
 
-  First Name
-  This field is required
+          <!-- Query Type -->
 
-  Last Name
-  This field is required
+          <fieldset id="query">
+            <legend class="labels">
+              Query Type <span class="required">*</span>
+            </legend>
+            <div id="radio-btns"><div class="radio-btns">
+              <input type="radio" name="query" id="enquiry" required />
+              <label for="enquiry" class="radio-labels">General Enquiry</label>
+            </div>
+            <div class="radio-btns">
+              <input type="radio" name="query" id="request" value="" required />
+              <label for="request" class="radio-labels">Support Request</label>
+            </div>
+          </div>
+            <p class="error-state hide" id="radio-error">Pls select a query type</p>
+          </fieldset>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+          <!-- Message -->
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+          <label for="msg" class="labels"
+            >Message <span class="required">*</span>
+          </label>
+          <textarea name="msg" id="msg" rows="7" required></textarea>
+          <p class="error-state hide" id="msg-error">This field is required</p>
 
-  Message
-  This field is required
+          <!-- Consent Checkbox-->
+          <div class="checkbox">
+            <input type="checkbox" id="consent-msg" required />
+            <label for="consent-msg" id="checkbox-label">
+              I consent to being contacted by the team
+            </label>
+            <span class="required">*</span>
+          </div>
+          <p class="error-state hide" id="consent-error">
+            To submit this form please consent to being contacted
+          </p>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+          <!-- Submit Button -->
 
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <button type="submit">Submit</button>
+        </main>
+        
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
