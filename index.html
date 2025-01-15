@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <!-- Submit Message -->
-    <div class="msg-sent ">
+    <div class="msg-sent hide">
       <p id="msg-bold">
         <b
           ><span
@@ -46,7 +47,9 @@
                 required
                 minlength="3"
               />
-              <p class="error-state hide" id="fname-error">This field is required</p>
+              <p class="error-state hide" id="fname-error">
+                This field is required
+              </p>
             </div>
 
             <!-- Last Name -->
@@ -61,7 +64,9 @@
                 required
                 minlength="2"
               />
-              <p class="error-state hide" id="lname-error">This field is required</p>
+              <p class="error-state hide" id="lname-error">
+                This field is required
+              </p>
             </div>
           </div>
           <!-- Email -->
@@ -70,7 +75,9 @@
             >Email Address<span class="required">*</span></label
           >
           <input type="email" name="email" id="email" required />
-          <p class="error-state hide" id="email-error">Please enter a valid email address</p>
+          <p class="error-state hide" id="email-error">
+            Please enter a valid email address
+          </p>
 
           <!-- Query Type -->
 
@@ -78,16 +85,29 @@
             <legend class="labels">
               Query Type <span class="required">*</span>
             </legend>
-            <div id="radio-btns"><div class="radio-btns">
-              <input type="radio" name="query" id="enquiry" required />
-              <label for="enquiry" class="radio-labels">General Enquiry</label>
+            <div id="radio-btns">
+              <div class="radio-btns">
+                <input type="radio" name="query" id="enquiry" required />
+                <label for="enquiry" class="radio-labels"
+                  >General Enquiry</label
+                >
+              </div>
+              <div class="radio-btns">
+                <input
+                  type="radio"
+                  name="query"
+                  id="request"
+                  value=""
+                  required
+                />
+                <label for="request" class="radio-labels"
+                  >Support Request</label
+                >
+              </div>
             </div>
-            <div class="radio-btns">
-              <input type="radio" name="query" id="request" value="" required />
-              <label for="request" class="radio-labels">Support Request</label>
-            </div>
-          </div>
-            <p class="error-state hide" id="radio-error">Pls select a query type</p>
+            <p class="error-state hide" id="radio-error">
+              Pls select a query type
+            </p>
           </fieldset>
 
           <!-- Message -->
@@ -114,7 +134,6 @@
 
           <button type="submit">Submit</button>
         </main>
-        
       </form>
     </div>
     <script src="app.js"></script>
